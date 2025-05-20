@@ -1,10 +1,48 @@
 ---
+import { Image } from "astro:assets";
 import { SectionContainer } from "../../common/SectionContainer/SectionContainer";
+import type { IProfessional } from "../../models/IProfessionals";
+import fiorePicture from "../../assets/fiore.jpeg";
+import irenePicture from "../../assets/irene.jpeg";
+import Professional from "./Professional/Professional.astro";
+
 const title = "Nuestros Profesionales";
 const description =
     "Contamos con un equipo de profesionales altamente calificados para brindarte la mejor atención.";
+
+const professionals: IProfessional[] = [
+    {
+        name: "Dra. Irene Alejandra Casella",
+        mp: 4313,
+        specialties: [
+            "Odontología rehabilitadora",
+            "Cirugía",
+            "Implantes",
+            "Carillas",
+            "Aplicación de ácido hialurónico",
+        ],
+        picture: irenePicture,
+    },
+    {
+        name: "Dra. Fiorella Barioglio",
+        mp: 11137,
+        specialties: [
+            "Odontología general",
+            "Endodoncia",
+            "Blanqueamientos",
+            "Ortodoncia",
+        ],
+        picture: fiorePicture,
+    },
+];
 ---
 
 <SectionContainer title={title} description={description}>
-    <span>hola</span>
+    <ul class="flex flex-wrap gap-10 items-stretch justify-center w-full">
+        {
+            professionals.map((professional) => {
+                return <Professional professional={professional} />;
+            })
+        }
+    </ul>
 </SectionContainer>

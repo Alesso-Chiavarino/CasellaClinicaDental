@@ -1,0 +1,41 @@
+---
+const { professional } = Astro.props;
+import { Image } from "astro:assets";
+---
+
+<li class="w-full max-w-md">
+    <article
+        class="flex shadow-md rounded-2xl overflow-hidden min-h-[300px] bg-white"
+    >
+        <picture class="w-[35%] flex items-center justify-center">
+            <Image
+                src={professional.picture}
+                alt="Fiore"
+                class={"object-cover w-full h-full"}
+                loading="lazy"
+            />
+        </picture>
+        <div class="w-[65%] p-5 flex flex-col justify-center">
+            <div class="mb-3">
+                <h5 class="text-xl font-bold">
+                    {professional.name}
+                </h5>
+                <span class="text-[#b8eae9] font-medium">
+                    MP {professional.mp}
+                </span>
+            </div>
+            <div>
+                <span class="font-semibold">Especialidades: </span>
+                <ul
+                    class="px-5 list-disc marker:text-[#b8eae9] text-sm mt-1 space-y-1"
+                >
+                    {
+                        professional.specialties.map((speciality) => (
+                            <li>{speciality}</li>
+                        ))
+                    }
+                </ul>
+            </div>
+        </div>
+    </article>
+</li>
