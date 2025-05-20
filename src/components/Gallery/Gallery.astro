@@ -1,0 +1,42 @@
+---
+import { SectionContainer } from "../../common/SectionContainer/SectionContainer";
+const title = "Galería";
+const description =
+    "Conoce nuestras instalaciones modernas y equipadas con la última tecnología para brindarte la mejor atención.";
+import { Image } from "astro:assets";
+import galleryImage1 from "../../assets/consultorio1.jpeg";
+import galleryImage2 from "../../assets/consultorio2.jpeg";
+import galleryImage3 from "../../assets/consultorio3.jpeg";
+import galleryImage4 from "../../assets/consultorio4.jpeg";
+import galleryImage5 from "../../assets/consultorio5.jpeg";
+import galleryImage6 from "../../assets/consultorio6.jpeg";
+
+const galleryImages = [
+    galleryImage1,
+    galleryImage2,
+    galleryImage3,
+    galleryImage4,
+    galleryImage5,
+    galleryImage6,
+];
+---
+
+<SectionContainer title={title} description={description}>
+    <ul class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        {
+            galleryImages.map((galleryImg) => {
+                return (
+                    <li class="flex justify-center">
+                        <Image
+                            src={galleryImg}
+                            alt="Imagen del consultorio"
+                            class="w-full max-w-[380px] aspect-square object-cover rounded-xl shadow-md"
+                            loading="lazy"
+                        />
+                    </li>
+                );
+            })
+        }
+    </ul>
+</SectionContainer>
+

@@ -1,5 +1,5 @@
 import { SectionContainer } from "../../common/SectionContainer/SectionContainer";
-import { ServiceCard } from "../ServiceCard/ServiceCard";
+import { ServiceCard } from "./ServiceCard/ServiceCard";
 import { Smile, Microscope, Shield, Scissors, Wrench, Sparkles, Syringe, AlignJustify } from "lucide-react"
 
 export const Services = () => {
