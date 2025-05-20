@@ -1,0 +1,23 @@
+---
+import logo from "../../assets/casella-logo.png";
+import { Image } from "astro:assets";
+import ScheduleButton from "../../common/ScheduleButton/ScheduleButton.astro";
+---
+
+<nav
+    class="flex justify-between items-center px-8 py-2 bg-white shadow-md text-black"
+>
+    <picture>
+        <Image src={logo} alt="Logo" class={"w-[140px]"} loading="lazy" />
+    </picture>
+
+    <ul class="flex gap-5 items-center">
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#galeria">Galería</a></li>
+        <li><a href="#testimonios">Testimonios</a></li>
+        <li><a href="#ubicacion">Ubicación</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+
+        <ScheduleButton />
+    </ul>
+</nav>

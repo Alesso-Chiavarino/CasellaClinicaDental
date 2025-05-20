@@ -1,11 +1,17 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import Breakline from "../common/Breakline/Breakline.astro";
+import Banner from "../components/Banner/Banner.astro";
+import Navbar from "../components/Navbar/Navbar.astro";
+import Professionals from "../components/Professionals/Professionals.astro";
+import { Services } from "../components/Services/Services";
+import Layout from "../layouts/Layout.astro";
 import "../styles/global.css";
 ---
+
 <Layout>
-	<h1 class="text-3xl font-bold underline">
-		Hello world!
-	</h1>
-	<Welcome />
+	<Navbar />
+	<Banner />
+	<Services />
+	<Breakline />
+	<Professionals />
 </Layout>

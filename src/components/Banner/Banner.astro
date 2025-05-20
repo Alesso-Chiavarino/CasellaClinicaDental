@@ -1,0 +1,31 @@
+---
+import ScheduleButton from "../../common/ScheduleButton/ScheduleButton.astro";
+---
+
+<section
+    class={`relative overflow-hidden h-[600px] bg-[url('https://i.pinimg.com/736x/16/09/48/160948b14041e83154dea59ba4d9d12d.jpg')] bg-cover bg-center`}
+>
+    <div class="absolute inset-0 bg-black opacity-70 z-0"></div>
+
+    <div
+        class="relative z-10 container h-full flex flex-col items-center justify-center px-4 py-8 mx-auto text-center text-white w-[80%]"
+    >
+        <h1 class="text-6xl font-bold">
+            Sonrisas saludables para toda la familia
+        </h1>
+
+        <p class="text-center text-lg mt-4 max-w-2xl">
+            Ofrecemos <strong>atención odontológica de calidad</strong> con tecnología
+            avanzada y un equipo profesional comprometido con tu bienestar.
+        </p>
+
+        <div class="flex items-center justify-center gap-4 mt-6">
+            <ScheduleButton />
+            <button
+                class="flex items-center cursor-pointer gap-2 font-medium px-4 py-2 rounded-md transition duration-200 border-[1px] border-white hover:bg-white hover:text-black"
+            >
+                Conocer Nuestros Servicios
+            </button>
+        </div>
+    </div>
+</section>
