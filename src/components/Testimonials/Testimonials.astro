@@ -1,0 +1,31 @@
+---
+import { SectionContainer } from "../../common/SectionContainer/SectionContainer";
+import StarRating from "./StarRating/StarRating.astro";
+import Testimonial from "./Testimonial/Testimonial.astro";
+const title = "Lo que dicen nuestros pacientes";
+
+const testimonials = [
+    {
+        starRating: 5,
+        text: "Excelente atención y profesionalismo. Terminé mi tratamiento de ortodoncia y estoy muy satisfecha con los resultados.",
+    },
+    {
+        starRating: 5,
+        text: "Después de perder varios dientes, pensé que no volvería a sonreír con confianza. Gracias a los implantes que me realizaron, ahora puedo comer y sonreír sin preocupaciones.",
+    },
+    {
+        starRating: 5,
+        text: "Mi hijo siempre tenía miedo al dentista, pero desde que venimos a esta clínica, está encantado. El trato con los niños es excepcional.",
+    },
+];
+---
+
+<SectionContainer title={title} description={""}>
+    <ul class="flex gap-6 flex-wrap justify-center items-start px-4">
+        {
+            testimonials.map((testimonial) => (
+                <Testimonial testimonial={testimonial} />
+            ))
+        }
+    </ul>
+</SectionContainer>

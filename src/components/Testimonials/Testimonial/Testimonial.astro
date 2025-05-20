@@ -1,0 +1,14 @@
+---
+import StarRating from "../StarRating/StarRating.astro";
+
+const { testimonial } = Astro.props;
+---
+
+<li
+    class="bg-white shadow-md rounded-xl p-6 w-[300px] max-w-full text-center flex flex-col gap-3 min-h-[200px]"
+>
+    <StarRating count={testimonial.starRating} />
+    <p class="text-gray-600 text-sm italic">
+        "{testimonial.text}"
+    </p>
+</li>
