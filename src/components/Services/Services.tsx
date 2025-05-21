@@ -7,7 +7,7 @@ export const Services = () => {
     const services = [
         {
             title: "Odontología General",
-            description: "Limpiezas, arreglos, placas de relajación, etc.",
+            description: "Limpiezas, arreglos, placas de relajación.",
             icon: <Smile className="w-8 h-8 text-primary" />,
         },
         {
@@ -17,7 +17,7 @@ export const Services = () => {
         },
         {
             title: "Odontología Preventiva",
-            description: "Controles periódicos, topicaciones con flúor, protectores bucales para deporte, etc.",
+            description: "Controles periódicos, topicaciones con flúor, protectores bucales para deporte.",
             icon: <Shield className="w-8 h-8 text-primary" />,
         },
         {
@@ -27,7 +27,7 @@ export const Services = () => {
         },
         {
             title: "Rehabilitación Oral",
-            description: "Prótesis sobre implantes, coronas, incrustaciones, prótesis removibles, etc.",
+            description: "Prótesis sobre implantes, coronas, incrustaciones, prótesis removibles.",
             icon: <Wrench className="w-8 h-8 text-primary" />,
         },
         {

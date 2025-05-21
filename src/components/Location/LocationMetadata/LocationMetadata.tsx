@@ -44,8 +44,8 @@ export const LocationMetadata = () => {
                 <div>
                     <h5 className="font-semibold text-lg mb-1">Contacto</h5>
                     <p className="text-gray-600 text-sm">
-                        Teléfono: (123) 456-7890<br />
-                        WhatsApp: (123) 456-7890<br />
+                        Teléfono: (351) 6132782<br />
+                        WhatsApp: (351) 6132782<br />
                         odbarioglio@gmail.com
                     </p>
                 </div>
