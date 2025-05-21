@@ -1,9 +1,11 @@
 import { SectionContainer } from "../../common/SectionContainer/SectionContainer";
+import { Datepicker } from "flowbite-react";
+import { Send } from "lucide-react"
 
 export const Contact = () => {
-  const title = "Agenda tu Cita";
+  const title = "Agenda tu Turno";
   const description =
-    "Completa el formulario y nos pondremos en contacto contigo para confirmar tu cita.";
+    "Completa el formulario y nos pondremos en contacto contigo para confirmar tu turno.";
 
   return (
     <SectionContainer title={title} description={description}>
@@ -56,10 +58,7 @@ export const Contact = () => {
           <label className="block text-sm font-medium text-gray-700 mb-1">
             Fecha preferida
           </label>
-          <input
-            type="date"
-            className="w-full border border-gray-300 rounded-md p-2"
-          />
+          <Datepicker />
         </div>
 
         {/* Mensaje */}
@@ -77,10 +76,10 @@ export const Contact = () => {
         <div className="md:col-span-2">
           <button
             type="submit"
-            className="w-full bg-teal-200 hover:bg-teal-300 text-gray-800 font-medium py-2 px-4 rounded-md flex justify-center items-center gap-2"
+            className="w-full bg-teal-200 hover:bg-teal-300 text-gray-800 font-medium py-2 px-4 rounded-md flex justify-center items-center gap-2 cursor-pointer transition duration-200 ease-in-out"
           >
-            <span className="material-icons">calendar_today</span>
-            Solicitar Cita
+            <Send className="w-4 h-4"/>
+            <span>Solicitar Turno</span>
           </button>
         </div>
       </form>
