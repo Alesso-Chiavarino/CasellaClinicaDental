@@ -8,7 +8,7 @@ export const Contact = () => {
     "Completa el formulario y nos pondremos en contacto contigo para confirmar tu turno.";
 
   return (
-    <SectionContainer title={title} description={description}>
+    <SectionContainer title={title} description={description} id={"contact"}>
       <form className="grid grid-cols-1 md:grid-cols-2 gap-4 w-[80%] mx-auto">
         {/* Nombre y Teléfono */}
         <div>
