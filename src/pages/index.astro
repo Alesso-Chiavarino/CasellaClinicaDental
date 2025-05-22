@@ -9,11 +9,13 @@ import { Services } from "../components/Services/Services";
 import Testimonials from "../components/Testimonials/Testimonials.astro";
 import Layout from "../layouts/Layout.astro";
 import { Contact } from "../components/Contact/Contact";
-import "../styles/global.css";
 import Footer from "../components/Footer/Footer.astro";
+import { AOSInit } from "../common/AOSInit/AOSInit"
+import "../styles/global.css";
 ---
 
 <Layout>
+	<AOSInit client:only />
 	<Navbar client:load />
 	<Banner />
 	<Services />
