@@ -178,8 +178,7 @@ export const Contact = () => {
           className={"md:col-span-2"}
           keyName={"message"}
         />
-        <Button title={"Solicitar Turno"} className={"md:col-span-2"} disabled={false} />
-        {/* <Button title={"Solicitar Turno"} className={"md:col-span-2"} disabled={isLoading} /> */}
+        <Button title={"Solicitar Turno"} className={"md:col-span-2"} disabled={isLoading} />
       </form>
       <Toaster />
     </SectionContainer>
