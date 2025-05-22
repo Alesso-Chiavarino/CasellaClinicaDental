@@ -80,8 +80,6 @@ export const Contact = () => {
     }
   
     setIsLoading(true);
-
-    setFormValues(formInitialValues);
   
     await toast.promise(
       EmailJSDataProvider.sendEmail(formValues),
