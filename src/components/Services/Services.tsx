@@ -54,8 +54,8 @@ export const Services = () => {
     return (
         <SectionContainer title={title} description={description} id={"services"}>
             <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-                {services.map((service) => (
-                    <ServiceCard key={service.title} service={service} />
+                {services.map((service, idx) => (
+                    <ServiceCard key={service.title} service={service} idx={idx} />
                 ))}
             </ul>
         </SectionContainer>
