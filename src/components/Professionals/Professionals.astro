@@ -38,7 +38,7 @@ const professionals: IProfessional[] = [
 ---
 
 <SectionContainer title={title} description={description} id={"professionals"}>
-    <ul class="flex flex-wrap gap-10 items-stretch justify-center w-full">
+    <ul class="flex flex-wrap gap-10 items-stretch justify-center w-full overflow-x-hidden">
         {
             professionals.map((professional, index) => {
                 const direction = index % 2 === 0 ? "fade-left" : "fade-right";
