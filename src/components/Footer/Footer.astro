@@ -5,104 +5,62 @@ import WhatsAppIcon from "../../assets/icons/WhatsAppIcon.astro";
 ---
 
 <footer class="bg-[#2e2e2e] text-[#d3d3d3] pt-10 px-5 mt-12">
-    <div class="flex flex-wrap justify-between max-w-[1200px] mx-auto gap-5">
-        <div class="flex-1 w-fit mb-5">
-            <h6 class="text-[#b0fdf5] font-semibold text-xl">Clínica Dental</h6>
-            <p class="mt-2">
-                Cuidamos de tu salud bucal con los más altos estándares de
-                calidad y tecnología de vanguardia.
-            </p>
-            <div class="mt-2 flex space-x-3 text-2xl">
-                <a href="https://www.instagram.com/casellaclinicadental?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><InstagramIcon /></a>
-                <a href="https://wa.me/3516132782" target="_blank"><WhatsAppIcon /></a>
-                <a href="mailto:odbarioglio@gmail.com"><MailIcon /></a>
-            </div>
-        </div>
-
-        <div class="flex-1 w-fit mb-5">
-            <h6 class="text-[#b0fdf5] font-semibold text-xl">Servicios</h6>
-            <ul class="list-none p-0 mt-2 space-y-1">
-                <li>Odontología General</li>
-                <li>Endodoncia</li>
-                <li>Odontología Preventiva</li>
-                <li>Cirugía</li>
-                <li>Rehabilitación Oral</li>
-                <li>Odontología Estética</li>
-                <li>Rellenos con Ácido Hialurónico</li>
-                <li>Ortodoncia</li>
-            </ul>
-        </div>
-
-        <div class="flex-1 w-fit mb-5">
-            <h6 class="text-[#b0fdf5] font-semibold text-xl">
-                Enlaces Rápidos
-            </h6>
-            <ul class="list-none p-0 mt-2 space-y-1">
-                <li>
-                    <a
-                        href="#"
-                        class="text-[#d3d3d3] no-underline hover:underline"
-                        >Inicio</a
-                    >
-                </li>
-                <li>
-                    <a
-                        href="#services"
-                        class="text-[#d3d3d3] no-underline hover:underline"
-                        >Servicios</a
-                    >
-                </li>
-                <li>
-                    <a
-                        href="#professionals"
-                        class="text-[#d3d3d3] no-underline hover:underline"
-                        >Profesionales</a
-                    >
-                </li>
-                <li>
-                    <a
-                        href="#gallery"
-                        class="text-[#d3d3d3] no-underline hover:underline"
-                        >Galería</a
-                    >
-                </li>
-                <li>
-                    <a
-                        href="#testimonials"
-                        class="text-[#d3d3d3] no-underline hover:underline"
-                        >Testimonios</a
-                    >
-                </li>
-                <li>
-                    <a
-                        href="#location"
-                        class="text-[#d3d3d3] no-underline hover:underline"
-                        >Ubicación</a
-                    >
-                </li>
-                <li>
-                    <a
-                        href="#contact"
-                        class="text-[#d3d3d3] no-underline hover:underline"
-                        >Contacto</a
-                    >
-                </li>
-            </ul>
-        </div>
-
-        <div class="flex-1 w-fit mb-5">
-            <h6 class="text-[#b0fdf5] font-semibold text-xl">Contacto</h6>
-            <p class="mt-2">Av. Duarte Quiros 2001-1 piso departamento C</p>
-            <p>Esquina Ocaña - Barrio Alto Alberdi</p>
-            <p>Córdoba</p>
-            <p>Tel: (351) 6132782</p>
-            <p>Email: odbarioglio@gmail.com</p>
-        </div>
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-[1200px] mx-auto">
+    <!-- Columna 1 -->
+    <div>
+      <h6 class="text-[#b0fdf5] font-semibold text-xl">Clínica Dental</h6>
+      <p class="mt-2">
+        Cuidamos de tu salud bucal con los más altos estándares de calidad y tecnología de vanguardia.
+      </p>
+      <div class="mt-4 flex space-x-3 text-2xl">
+        <a href="https://www.instagram.com/casellaclinicadental?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer"><InstagramIcon /></a>
+        <a href="https://wa.me/3516132782" target="_blank" rel="noopener noreferrer"><WhatsAppIcon /></a>
+        <a href="mailto:odbarioglio@gmail.com"><MailIcon /></a>
+      </div>
     </div>
 
-    <div class="text-center py-5 border-t border-[#444] text-sm mt-5">
-        <strong
-            >© 2025 Casella Clínica Dental. Todos los derechos reservados.</strong
-        >
+    <!-- Columna 2 -->
+    <div>
+      <h6 class="text-[#b0fdf5] font-semibold text-xl">Servicios</h6>
+      <ul class="mt-2 space-y-1">
+        <li>Odontología General</li>
+        <li>Endodoncia</li>
+        <li>Odontología Preventiva</li>
+        <li>Cirugía</li>
+        <li>Rehabilitación Oral</li>
+        <li>Odontología Estética</li>
+        <li>Rellenos con Ácido Hialurónico</li>
+        <li>Ortodoncia</li>
+      </ul>
     </div>
+
+    <!-- Columna 3 -->
+    <div>
+      <h6 class="text-[#b0fdf5] font-semibold text-xl">Enlaces Rápidos</h6>
+      <ul class="mt-2 space-y-1">
+        <li><a href="#" class="hover:underline">Inicio</a></li>
+        <li><a href="#services" class="hover:underline">Servicios</a></li>
+        <li><a href="#professionals" class="hover:underline">Profesionales</a></li>
+        <li><a href="#gallery" class="hover:underline">Galería</a></li>
+        <li><a href="#testimonials" class="hover:underline">Testimonios</a></li>
+        <li><a href="#location" class="hover:underline">Ubicación</a></li>
+        <li><a href="#contact" class="hover:underline">Contacto</a></li>
+      </ul>
+    </div>
+
+    <!-- Columna 4 -->
+    <div>
+      <h6 class="text-[#b0fdf5] font-semibold text-xl">Contacto</h6>
+      <p class="mt-2">Av. Duarte Quiros 2001-1 piso departamento C</p>
+      <p>Esquina Ocaña - Barrio Alto Alberdi</p>
+      <p>Córdoba</p>
+      <p>Tel: (351) 6132782</p>
+      <p>Email: odbarioglio@gmail.com</p>
+    </div>
+  </div>
+
+  <!-- Footer inferior -->
+  <div class="text-center py-5 border-t border-[#444] text-sm mt-10">
+    <strong>© 2025 Casella Clínica Dental. Todos los derechos reservados.</strong>
+  </div>
 </footer>

@@ -3,7 +3,7 @@ import Breakline from "../common/Breakline/Breakline.astro";
 import Banner from "../components/Banner/Banner.astro";
 import Gallery from "../components/Gallery/Gallery.astro";
 import Location from "../components/Location/Location.astro";
-import Navbar from "../components/Navbar/Navbar.astro";
+import { Navbar } from "../components/Navbar/Navbar";
 import Professionals from "../components/Professionals/Professionals.astro";
 import { Services } from "../components/Services/Services";
 import Testimonials from "../components/Testimonials/Testimonials.astro";
@@ -14,7 +14,7 @@ import Footer from "../components/Footer/Footer.astro";
 ---
 
 <Layout>
-	<Navbar />
+	<Navbar client:load />
 	<Banner />
 	<Services />
 	<Breakline />

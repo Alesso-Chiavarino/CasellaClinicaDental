@@ -7,12 +7,12 @@ const description =
 ---
 
 <SectionContainer title={title} description={description} id={"location"}>
-    <div class="flex gap-6">
+    <div class="flex gap-6 flex-col lg:flex-row">
         <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3404.5730584053!2d-64.20729492428868!3d-31.42553097495244!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9432a32dcf5d747f%3A0x5dd5e2fb2fd4d962!2sAv.%20Duarte%20Quir%C3%B3s%202001%2C%20X5003%20C%C3%B3rdoba!5e0!3m2!1ses!2sar!4v1716222345678!5m2!1ses!2sar"
             loading="lazy"
             title="Ubicación de la clínica dental"
-            class="rounded-xl shadow-md min-h-[450px] w-[70%]"></iframe>
+            class="rounded-xl shadow-md min-h-[450px] w-[100%] lg:w-[70%]"></iframe>
             <LocationMetadata />
     </div>
 </SectionContainer>

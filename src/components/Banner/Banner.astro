@@ -1,5 +1,5 @@
 ---
-import ScheduleButton from "../../common/ScheduleButton/ScheduleButton.astro";
+import { ScheduleButton } from "../../common/ScheduleButton/ScheduleButton";
 ---
 
 <section
@@ -10,7 +10,7 @@ import ScheduleButton from "../../common/ScheduleButton/ScheduleButton.astro";
     <div
         class="relative z-10 container h-full flex flex-col items-center justify-center px-4 py-8 mx-auto text-center text-white w-[80%]"
     >
-        <h1 class="text-6xl font-bold">
+        <h1 class="md:text-6xl text-5xl font-bold">
             Sonrisas saludables para toda la familia
         </h1>
 
@@ -19,7 +19,7 @@ import ScheduleButton from "../../common/ScheduleButton/ScheduleButton.astro";
             avanzada y un equipo profesional comprometido con tu bienestar.
         </p>
 
-        <div class="flex items-center justify-center gap-4 mt-6">
+        <div class="flex items-center md:flex-row justify-center gap-4 mt-6 flex-col-reverse">
             <ScheduleButton />
             <button
                 class="flex items-center cursor-pointer gap-2 font-medium px-4 py-2 rounded-md transition duration-200 border-[1px] border-white hover:bg-white hover:text-black"

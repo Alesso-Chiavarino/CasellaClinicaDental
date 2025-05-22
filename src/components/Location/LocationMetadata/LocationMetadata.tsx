@@ -2,7 +2,7 @@ import { MapPin, Clock, Phone, Mail } from "lucide-react"
 
 export const LocationMetadata = () => {
   return (
-    <div className="flex flex-col gap-4 w-[30%] min-h-[450px]">
+    <div className="flex flex-col gap-4 w-[100%] lg:w-[30%] min-h-[450px]">
             <article
                 className="flex items-start gap-4 p-4 bg-white rounded-xl shadow border border-gray-100 min-h-[150px]"
             >
