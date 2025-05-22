@@ -15,17 +15,24 @@ export const Contact = () => {
   const description =
     "Completa el formulario y nos pondremos en contacto contigo para confirmar tu turno.";
 
+    const date = new Date().toLocaleDateString("es-AR", {
+      day: "2-digit",
+      month: "2-digit",
+      year: "numeric",
+  })
+
   const formInitialValues = {
     name: "",
     phone: "",
     email: "",
     service: "",
-    date: "",
+    date,
     message: "",
   };
 
   const [formValues, setFormValues] = useState(formInitialValues);
   const [errors, setErrors] = useState<Record<string, string>>({});
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleChange = (
     e: React.ChangeEvent<
@@ -63,30 +70,35 @@ export const Contact = () => {
 
   const submitValues = async (e: React.FormEvent) => {
     e.preventDefault();
-
+  
     const validationErrors = validateForm();
-
+  
     if (Object.keys(validationErrors).length > 0) {
       setErrors(validationErrors);
       toast.error("Por favor completa los campos requeridos");
       return;
     }
+  
+    setIsLoading(true);
 
-    // try {
-    //   const res = await EmailJSDataProvider.sendEmail(formValues);
-
-    //   if (res.status === 200) {
-    //     toast.success("Formulario enviado con éxito");
-    //     setFormValues(formInitialValues);
-    //     setErrors({});
-    //   } else {
-    //     toast.error("Hubo un problema al enviar el formulario");
-    //   }
-    // } catch (err) {
-    //   console.error("Error al enviar el formulario:", err);
-    //   toast.error("Error de red al enviar el formulario");
-    // }
-  };
+    setFormValues(formInitialValues);
+  
+    await toast.promise(
+      EmailJSDataProvider.sendEmail(formValues),
+      {
+        loading: "Enviando formulario...",
+        success: () => {
+          setFormValues(formInitialValues);
+          setErrors({});
+          return "Formulario enviado con éxito";
+        },
+        error: () => "Hubo un problema al enviar el formulario",
+        finally: () => {
+          setIsLoading(false);
+        }
+      }
+    )
+  };  
 
   return (
     <SectionContainer
@@ -166,7 +178,8 @@ export const Contact = () => {
           className={"md:col-span-2"}
           keyName={"message"}
         />
-        <Button title={"Solicitar Turno"} className={"md:col-span-2"} />
+        <Button title={"Solicitar Turno"} className={"md:col-span-2"} disabled={false} />
+        {/* <Button title={"Solicitar Turno"} className={"md:col-span-2"} disabled={isLoading} /> */}
       </form>
       <Toaster />
     </SectionContainer>

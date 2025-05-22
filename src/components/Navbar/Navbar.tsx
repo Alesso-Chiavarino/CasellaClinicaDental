@@ -23,25 +23,25 @@ export const Navbar = () => {
 
     return (
         <>
-            <nav class="flex justify-between items-center px-8 py-4 bg-white shadow-md text-black sticky top-0 z-50">
-                <a href="#" class="cursor-pointer">
-                    <img src={logo.src} alt="Logo" class="w-[140px]" />
+            <nav className="flex justify-between items-center px-8 py-4 bg-white shadow-md text-black sticky top-0 z-50">
+                <a href="#" className="cursor-pointer">
+                    <img src={logo.src} alt="Logo" className="w-[140px]" />
                 </a>
 
-                <ul class="gap-5 items-center hidden lg:flex">
-                    <li class="hover:text-[#9fe3d9] transition-all duration-300">
+                <ul className="gap-5 items-center hidden lg:flex">
+                    <li className="hover:text-[#9fe3d9] transition-all duration-300">
                         <a href="#professionals">Profesionales</a>
                     </li>
-                    <li class="hover:text-[#9fe3d9] transition-all duration-300">
+                    <li className="hover:text-[#9fe3d9] transition-all duration-300">
                         <a href="#gallery">Galería</a>
                     </li>
-                    <li class="hover:text-[#9fe3d9] transition-all duration-300">
+                    <li className="hover:text-[#9fe3d9] transition-all duration-300">
                         <a href="#testimonials">Testimonios</a>
                     </li>
-                    <li class="hover:text-[#9fe3d9] transition-all duration-300">
+                    <li className="hover:text-[#9fe3d9] transition-all duration-300">
                         <a href="#location">Ubicación</a>
                     </li>
-                    <li class="hover:text-[#9fe3d9] transition-all duration-300">
+                    <li className="hover:text-[#9fe3d9] transition-all duration-300">
                         <a href="#contact">Contacto</a>
                     </li>
                     <li>
@@ -49,7 +49,7 @@ export const Navbar = () => {
                     </li>
                 </ul>
 
-                <div class="lg:hidden" onClick={() => handlePanel(true)}>
+                <div className="lg:hidden" onClick={() => handlePanel(true)}>
                     <MenuIcon />
                 </div>
             </nav>
