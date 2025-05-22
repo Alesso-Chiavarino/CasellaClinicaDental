@@ -14,7 +14,7 @@ export default defineConfig({
   vite: {
       plugins: [tailwindcss()],
   },
-
+  site: 'https://www.ccbdental.com',
   integrations: [react(), flowbiteReact(), sitemap()],
   adapter: vercel(),
 });
