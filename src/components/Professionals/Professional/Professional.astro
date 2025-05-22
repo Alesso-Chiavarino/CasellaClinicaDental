@@ -1,16 +1,22 @@
 ---
-const { professional } = Astro.props;
+const { professional, animationDirection } = Astro.props;
 import { Image } from "astro:assets";
 ---
 
-<li class="w-full max-w-md">
+<li
+    class="w-full max-w-md"
+    data-aos={animationDirection}
+    data-aos-offset="0"
+    data-aos-duration="600"
+    data-aos-easing="ease-out-cubic"
+>
     <article
         class="flex shadow-md rounded-2xl overflow-hidden min-h-[300px] bg-white"
     >
         <picture class="w-[35%] flex items-center justify-center">
             <Image
                 src={professional.picture}
-                alt="Fiore"
+                alt={professional.name}
                 class={"object-cover w-full h-full"}
                 loading="lazy"
             />

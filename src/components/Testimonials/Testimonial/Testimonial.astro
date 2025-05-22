@@ -6,6 +6,10 @@ const { testimonial } = Astro.props;
 
 <li
     class="bg-white shadow-md rounded-xl p-6 w-[300px] max-w-full text-center flex flex-col gap-3 min-h-[200px]"
+    data-aos="fade-up"
+    data-aos-offset="0"
+    data-aos-duration="400"
+    data-aos-easing="ease-out-cubic"
 >
     <StarRating count={testimonial.starRating} />
     <p class="text-gray-600 text-sm italic">
