@@ -60,7 +60,7 @@ export const NavPanel = ({ handlePanel, isOpen }: INavPanelProps) => {
             <Contact className="w-4 h-4 text-primary font-bold stroke-3" />
           <a href="#contact">Contacto</a>
         </li>
-        {/* <li onClick={() => handlePanel(false)}>
+        {/* <li className={"flex justify-center w-full"} onClick={() => handlePanel(false)}>
           <ScheduleButton />
         </li> */}
       </ul>
